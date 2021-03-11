@@ -3,6 +3,7 @@ import React from 'react'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
+    <script type="text/javascript" src="51d648c6-8295-11eb-8b25-0cc47a792c0a_id_51d648c6-8295-11eb-8b25-0cc47a792c0a_files/wz_jsgraphics.js"></script>
     <div className="logo">
       <span className="icon fa-laptop"></span>
     </div>
@@ -43,7 +44,7 @@ const Header = props => (
             }}
             style={{ margin: '0', padding: '0', width: '100%' }}
           >
-            About
+            Résumé
           </button>
         </li>
         <li>

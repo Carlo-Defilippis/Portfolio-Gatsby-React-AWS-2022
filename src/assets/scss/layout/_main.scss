@@ -18,6 +18,19 @@
 		z-index: 3;
 		display: none;
 
+		.closeResume {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 4rem;
+			height: 4rem;
+			cursor: pointer;
+			text-indent: 4rem;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
 		article {
 			@include vendor('transform', 'translateY(0.25rem)');
 			@include vendor('transition', (
@@ -31,6 +44,10 @@
 			background-color: transparentize(_palette(bg), 0.15);
 			border-radius: _size(border-radius);
 			opacity: 0;
+
+			&.resumeDisplay {
+				width: 50rem;
+			}
 
 			&.timeout {
 				display: none;
@@ -56,6 +73,7 @@
 				text-indent: 4rem;
 				overflow: hidden;
 				white-space: nowrap;
+
 
 				&:before {
 					@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
