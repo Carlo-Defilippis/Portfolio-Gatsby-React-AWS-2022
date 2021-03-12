@@ -2,24 +2,68 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import pic01 from '../images/imageface.png'
 import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
 import resBack from '../images/background1.jpg'
 
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { 
+      hover: false,
+      clientX: 0,
+      clientY: 0,
+      display: 'block'
+    }
+    this.handleMouseIn = this.handleMouseIn.bind(this, this.props.handleMouseIn)
+    this.handleMouseMove = this.handleMouseMove.bind(this, this.props.handleMouseMove)
+    this.handleMouseOut = this.handleMouseOut.bind(this, this.props.handleMouseOut)
+  }
+  
+  
+
+  handleMouseIn(e) {
+    this.setState({ 
+      hover: true,
+      clientX: e.clientX,
+      clientY: e.clientY,
+      display: 'block'
+    })
+    console.log('onMouseIn', e.clientX, e.clientY)
+  }
+
+  handleMouseOut(e) {
+    this.setState({ 
+      hover: false,
+      display: 'none'
+    })
+    console.log(
+      'onMouseLeave',
+      e.nativeEvent.clientX, e.nativeEvent.clientY
+    )
+    console.log("this mouse move event ", this.state)
+    console.log('This is the style object ', this.state)
+  }
+  
+  handleMouseMove(e){
+    this.setState({ 
+      hover: true,
+      display: 'none'
+    })
+    console.log(
+      'onMouseMove',
+      e.nativeEvent.clientX, e.nativeEvent.clientY
+    )
+    
+    // tooltipStyle[0].style.left = e.pageX + 'px';
+    // tooltipStyle[1].style.top = e.pageY + 'px';
+  }
+
+  
   render() {
     console.log(this.props)
     let close = (
       <div
         className="close"
-        onClick={() => {
-          this.props.onCloseArticle()
-        }}
-      ></div>
-    )
-    let closeResume = (
-      <div
-        className="closeResume"
         onClick={() => {
           this.props.onCloseArticle()
         }}
@@ -34,9 +78,8 @@ class Main extends React.Component {
       >
         <article
           id="intro"
-          className={`${this.props.article === 'intro' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
+          className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''
+            }`}
           style={{ display: 'none' }}
         >
           <h2 className="major">Intro</h2>
@@ -44,20 +87,19 @@ class Main extends React.Component {
             <img src={pic01} alt="" />
           </span>
           <p>
-          Innovative and proactive Full Stack Developer, successful at developing elegant,
-groundbreaking website and application designs. Talented in project management, team
-collaboration and independent problem-solving. Highly organized multitasking with expertise in scheduling
-projects, enhancing designs, writing and verifying code. Prepared to offer analytical and detail oriented 
-abilities to the team.
+            Innovative and proactive Full Stack Developer, successful at developing elegant,
+            groundbreaking website and application designs. Talented in project management, team
+            collaboration and independent problem-solving. Highly organized multitasking with expertise in scheduling
+            projects, enhancing designs, writing and verifying code. Prepared to offer analytical and detail oriented
+            abilities to the team.
           </p>
           {close}
         </article>
 
         <article
           id="work"
-          className={`${this.props.article === 'work' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
+          className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''
+            }`}
           style={{ display: 'none' }}
         >
           <h2 className="major">Work</h2>
@@ -102,17 +144,20 @@ abilities to the team.
           </p>
           {close}
         </article>
-          
-        
+
+
+
+        <div className='tooltip' value={this.state.clientX} style={{ display: this.state.display, hover: true, top: this.state.clientY, left: this.state.clientX }}>this is the tooltip!!
+
+          </div>
         <article
           id="about"
-          className={`${this.props.article === 'about' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          >
-            <div style={{ backgroundImage: `url(${resBack})`, objectFit: 'cover', width: '100%', height: '100%', float: 'left'}}>
-              <div className={'resumeDisplay'} style={{ marginLeft: '3rem', marginRight: '3rem', marginTop: '3rem', marginBottom: '3rem'}}>
-              <div className="cls_002" style={{ margin: 'auto'}}><span className="cls_002">CARLO DEFILIPPIS</span></div>
+          className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''
+            }`}
+        >
+          <div onMouseOver={this.handleMouseIn.bind(this)} onMouseOut={this.handleMouseOut.bind(this)} className='resumeBackground' style={{ backgroundImage: `url(${resBack})`, objectFit: 'cover', width: '100%', height: '100%', float: 'left' }}>
+            <div className={'resumeDisplay'} style={{ marginLeft: '3rem', marginRight: '3rem', marginTop: '3rem', marginBottom: '3rem' }}>
+              <div className="cls_002" style={{ margin: 'auto' }}><span className="cls_002">CARLO DEFILIPPIS</span></div>
               <div className="cls_003"><span className="cls_003">BUDD LAKE, NJ 07828</span></div>
               <div className="cls_003"><span className="cls_003">(973) 519-0335 | </span><a href='mailto: carlo.defilippis@me.com'><span className="cls_004">carlo.defilippis@me.com</span></a></div>
               <div className="cls_005"><span className="cls_005"> </span><a href="http://www.carlodefilippis.com/">www.carlodefilippis.com</a> </div>
@@ -155,17 +200,20 @@ abilities to the team.
               <div className="cls_008"><span className="cls_008">● </span><span className="cls_005">Graduated in Top 10% of Class</span></div>
               <div className="cls_006"><span className="cls_006">CERTIFICATIONS</span></div>
               <div className="cls_008"><span className="cls_008">● </span><span className="cls_005">JavaScript Algorithms and Data Structures (fCC)</span></div>
-              </div>
             </div>
+          </div>
 
           {close}
         </article>
-       
+
+
+
+
+
         <article
           id="contact"
-          className={`${this.props.article === 'contact' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
+          className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''
+            }`}
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
