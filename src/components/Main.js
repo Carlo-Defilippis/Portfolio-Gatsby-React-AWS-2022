@@ -3,64 +3,23 @@ import React from 'react'
 import pic01 from '../images/imageface.png'
 import pic02 from '../images/pic02.jpg'
 import resBack from '../images/background1.jpg'
+import MouseTooltip from './MouseTooltip'
 
 
 class Main extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { 
-      hover: false,
-      clientX: 0,
-      clientY: 0,
-      display: 'block'
-    }
-    this.handleMouseIn = this.handleMouseIn.bind(this, this.props.handleMouseIn)
-    this.handleMouseMove = this.handleMouseMove.bind(this, this.props.handleMouseMove)
-    this.handleMouseOut = this.handleMouseOut.bind(this, this.props.handleMouseOut)
-  }
-  
-  
-
-  handleMouseIn(e) {
-    this.setState({ 
-      hover: true,
-      clientX: e.clientX,
-      clientY: e.clientY,
-      display: 'block'
-    })
-    console.log('onMouseIn', e.clientX, e.clientY)
+  state = {
+    isMouseTooltipVisible: false,
   }
 
-  handleMouseOut(e) {
-    this.setState({ 
-      hover: false,
-      display: 'none'
-    })
-    console.log(
-      'onMouseLeave',
-      e.nativeEvent.clientX, e.nativeEvent.clientY
-    )
-    console.log("this mouse move event ", this.state)
-    console.log('This is the style object ', this.state)
+  handleMouseIn() {
+    this.setState({ isMouseTooltipVisible: true })
   }
   
-  handleMouseMove(e){
-    this.setState({ 
-      hover: true,
-      display: 'none'
-    })
-    console.log(
-      'onMouseMove',
-      e.nativeEvent.clientX, e.nativeEvent.clientY
-    )
-    
-    // tooltipStyle[0].style.left = e.pageX + 'px';
-    // tooltipStyle[1].style.top = e.pageY + 'px';
+  handleMouseOut() {
+    this.setState({ isMouseTooltipVisible: false })
   }
 
-  
   render() {
-    console.log(this.props)
     let close = (
       <div
         className="close"
@@ -145,18 +104,20 @@ class Main extends React.Component {
           {close}
         </article>
 
-
-
-        <div className='tooltip' value={this.state.clientX} style={{ display: this.state.display, hover: true, top: this.state.clientY, left: this.state.clientX }}>this is the tooltip!!
-
-          </div>
         <article
           id="about"
           className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''
             }`}
         >
-          <div onMouseOver={this.handleMouseIn.bind(this)} onMouseOut={this.handleMouseOut.bind(this)} className='resumeBackground' style={{ backgroundImage: `url(${resBack})`, objectFit: 'cover', width: '100%', height: '100%', float: 'left' }}>
-            <div className={'resumeDisplay'} style={{ marginLeft: '3rem', marginRight: '3rem', marginTop: '3rem', marginBottom: '3rem' }}>
+          <MouseTooltip
+            visible={this.state.isMouseTooltipVisible}
+            offsetX={50}
+            offsetY={50}
+          >
+            <span>Follow the cursor!</span>
+          </MouseTooltip>
+          <div className='resumeBackground' onMouseOver={this.handleMouseIn.bind(this)} onMouseOut={this.handleMouseOut.bind(this)} style={{ backgroundImage: `url(${resBack})`, objectFit: 'cover', width: '100%', height: '100%', float: 'left' }}>
+            <div className='resumeDisplay' style={{ marginLeft: '3rem', marginRight: '3rem', marginTop: '3rem', marginBottom: '3rem' }}>
               <div className="cls_002" style={{ margin: 'auto' }}><span className="cls_002">CARLO DEFILIPPIS</span></div>
               <div className="cls_003"><span className="cls_003">BUDD LAKE, NJ 07828</span></div>
               <div className="cls_003"><span className="cls_003">(973) 519-0335 | </span><a href='mailto: carlo.defilippis@me.com'><span className="cls_004">carlo.defilippis@me.com</span></a></div>
