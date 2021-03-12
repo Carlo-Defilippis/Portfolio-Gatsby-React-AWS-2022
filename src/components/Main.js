@@ -1,24 +1,21 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import ReactTooltip from 'react-tooltip';
 import pic01 from '../images/imageface.png'
 import pic02 from '../images/pic02.jpg'
 import resBack from '../images/background1.jpg'
-import MouseTooltip from './MouseTooltip'
 
 
 class Main extends React.Component {
-  state = {
-    isMouseTooltipVisible: false,
+  constructor(props) {
+    super(props);
+    this.state = {
+      place: 'top',
+      type: 'dark',
+      effect: 'float',
+      condition: false
+    };
   }
-
-  handleMouseIn() {
-    this.setState({ isMouseTooltipVisible: true })
-  }
-  
-  handleMouseOut() {
-    this.setState({ isMouseTooltipVisible: false })
-  }
-
   render() {
     let close = (
       <div
@@ -35,6 +32,7 @@ class Main extends React.Component {
         id="main"
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
+        <ReactTooltip place='top' />
         <article
           id="intro"
           className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''
@@ -104,23 +102,17 @@ class Main extends React.Component {
           {close}
         </article>
 
+
         <article
           id="about"
           className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''
-            }`}
+        }`}
         >
-          <MouseTooltip
-            visible={this.state.isMouseTooltipVisible}
-            offsetX={50}
-            offsetY={50}
-          >
-            <span>Follow the cursor!</span>
-          </MouseTooltip>
-          <div className='resumeBackground' onMouseOver={this.handleMouseIn.bind(this)} onMouseOut={this.handleMouseOut.bind(this)} style={{ backgroundImage: `url(${resBack})`, objectFit: 'cover', width: '100%', height: '100%', float: 'left' }}>
+          <div className='resumeBackground'  onMouseLeave={() => { ReactTooltip.hide(this.fooRef) }} style={{ backgroundImage: `url(${resBack})`, objectFit: 'cover', width: '100%', height: '100%', float: 'left' }}>
             <div className='resumeDisplay' style={{ marginLeft: '3rem', marginRight: '3rem', marginTop: '3rem', marginBottom: '3rem' }}>
-              <div className="cls_002" style={{ margin: 'auto' }}><span className="cls_002">CARLO DEFILIPPIS</span></div>
-              <div className="cls_003"><span className="cls_003">BUDD LAKE, NJ 07828</span></div>
-              <div className="cls_003"><span className="cls_003">(973) 519-0335 | </span><a href='mailto: carlo.defilippis@me.com'><span className="cls_004">carlo.defilippis@me.com</span></a></div>
+              <div className="cls_002" style={{ margin: 'auto' }} ><span className="cls_002">CARLO DEFILIPPIS</span></div>
+              <div className="cls_003"><span className="cls_003" ref={ref => this.fooRef = ref} data-tip="I'm grew up in Wayne, NJ and spent a lot of summers as a child visiting family in Italy which is the main reason I am fluent in Italian." onMouseOver={() => { ReactTooltip.show(this.fooRef) }}>BUDD LAKE, NJ 07828</span></div>
+              <div className="cls_003"><span className="cls_003">(973) 519-0335 | </span><a ref={ref => this.fooRef = ref} data-tip="Click here to email me." onMouseOver={() => { ReactTooltip.show(this.fooRef) }} href='mailto: carlo.defilippis@me.com'><span className="cls_004">carlo.defilippis@me.com</span></a></div>
               <div className="cls_005"><span className="cls_005"> </span><a href="http://www.carlodefilippis.com/">www.carlodefilippis.com</a> </div>
               <div className="cls_005"><span className="cls_005"> </span><a href="https://github.com/carlo-defilippis/">https://github.com/Carlo-Defilippis</a> </div>
               <div className="cls_005"><span className="cls_005"> </span><a href="https://www.freecodecamp.org/carlodefilippis/">https://www.freecodecamp.org/carlodefilippis</a> </div>
@@ -163,7 +155,6 @@ class Main extends React.Component {
               <div className="cls_008"><span className="cls_008">● </span><span className="cls_005">JavaScript Algorithms and Data Structures (fCC)</span></div>
             </div>
           </div>
-
           {close}
         </article>
 
