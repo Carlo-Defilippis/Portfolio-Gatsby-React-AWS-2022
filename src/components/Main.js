@@ -4,7 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import pic01 from '../images/imageface.png'
 import pic02 from '../images/pic02.jpg'
 import resBack from '../images/background1.jpg'
-
+import emailjs from 'emailjs-com';
 
 class Main extends React.Component {
   constructor(props) {
@@ -16,6 +16,23 @@ class Main extends React.Component {
       condition: false
     };
   }
+
+  
+// This is called when a user hits submit, sends email through emailjs module
+  sendMessage(event) {
+    event.preventDefault(); 
+    emailjs.init("user_Zyk3oWA5zP2LN3SzJKQVZ");
+
+    emailjs.sendForm('service_ooxok0h', 'template_i0to6do', event.target, 'user_Zyk3oWA5zP2LN3SzJKQVZ')
+    .then(function(response) {
+       alert("Email sent! I will get back to you as soon as possible. If you need to contact me urgently, click the Linkedin button below and message me there.");
+    }, function(error) {
+       alert("I'm sorry, I wasn't able to send an email this time, please try again later");
+    });
+    event.target.reset()
+}
+
+
   render() {
     let close = (
       <div
@@ -106,9 +123,9 @@ class Main extends React.Component {
         <article
           id="about"
           className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''
-        }`}
+            }`}
         >
-          <div className='resumeBackground'  onMouseLeave={() => { ReactTooltip.hide(this.fooRef) }} style={{ backgroundImage: `url(${resBack})`, objectFit: 'cover', width: '100%', height: '100%', float: 'left' }}>
+          <div className='resumeBackground' onMouseLeave={() => { ReactTooltip.hide(this.fooRef) }} style={{ backgroundImage: `url(${resBack})`, objectFit: 'cover', width: '100%', height: '100%', float: 'left' }}>
             <div className='resumeDisplay' style={{ marginLeft: '3rem', marginRight: '3rem', marginTop: '3rem', marginBottom: '3rem' }}>
               <div className="cls_002" style={{ margin: 'auto' }} ><span className="cls_002">CARLO DEFILIPPIS</span></div>
               <div className="cls_003"><span className="cls_003" ref={ref => this.fooRef = ref} data-tip="I'm grew up in Wayne, NJ and spent a lot of summers as a child visiting family in Italy which is the main reason I am fluent in Italian." onMouseOver={() => { ReactTooltip.show(this.fooRef) }}>BUDD LAKE, NJ 07828</span></div>
@@ -169,14 +186,14 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form method="post" action="#">
+          <form method="post" onSubmit={this.sendMessage}>
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name"/>
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input type="text" name="email" id="email"/>
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
@@ -194,28 +211,18 @@ class Main extends React.Component {
           <ul className="icons">
             <li>
               <a
-                href="https://twitter.com/HuntaroSan"
-                className="icon fa-twitter"
+                href="https://github.com/Carlo-Defilippis"
+                className="icon fa-github"
               >
-                <span className="label">Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://codebushi.com" className="icon fa-facebook">
-                <span className="label">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://codebushi.com" className="icon fa-instagram">
-                <span className="label">Instagram</span>
+                <span className="label">GitHub</span>
               </a>
             </li>
             <li>
               <a
-                href="https://github.com/codebushi/gatsby-starter-dimension"
-                className="icon fa-github"
+                href="https://www.linkedin.com/in/carlo-defilippis"
+                className="icon fa-linkedin-square"
               >
-                <span className="label">GitHub</span>
+                <span className="label">Linkedin</span>
               </a>
             </li>
           </ul>

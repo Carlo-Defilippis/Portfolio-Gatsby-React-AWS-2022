@@ -4,6 +4,7 @@ import React from 'react'
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <script type="text/javascript" src="51d648c6-8295-11eb-8b25-0cc47a792c0a_id_51d648c6-8295-11eb-8b25-0cc47a792c0a_files/wz_jsgraphics.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <div className="logo">
       <span className="icon fa-laptop"></span>
     </div>
