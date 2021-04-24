@@ -81,7 +81,7 @@ class Main extends React.Component {
             }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">React Employee Searcher</h2>
+          <h4 className="major">React Employee Searcher</h4>
           <span className="image main">
             <img src={pic02} alt="" />
           </span>
@@ -109,8 +109,8 @@ class Main extends React.Component {
             </li>
           </ul>
           {close}
-          <h3 className="line"></h3>
-          <h2 className="major">Google Books Books Search and Save</h2>
+          <h4 className="line"></h4>
+          <h4 className="major">Google Books Search and Save</h4>
           <span className="image main">
             <img src={pic03} alt="" />
           </span>
@@ -137,8 +137,8 @@ class Main extends React.Component {
               </a>
             </li>
           </ul>
-          <h3 className="line"></h3>
-          <h2 className="major">Progressive Budget</h2>
+          <h4 className="line"></h4>
+          <h4 className="major">Progressive Budget</h4>
           <span className="image main">
             <img src={pic04} alt="" />
           </span>
@@ -165,8 +165,8 @@ class Main extends React.Component {
               </a>
             </li>
           </ul>
-          <h3 className="line"></h3>
-          <h2 className="major">Marching Squares</h2>
+          <h4 className="line"></h4>
+          <h4 className="major">Marching Squares</h4>
           <span className="image main">
             <img src={pic06} alt="" />
           </span>
@@ -192,8 +192,8 @@ class Main extends React.Component {
               </a>
             </li>
           </ul>
-          <h3 className="line"></h3>
-          <h2 className="major">Fitness Tracker</h2>
+          <h4 className="line"></h4>
+          <h4 className="major">Fitness Tracker</h4>
           <span className="image main">
             <img src={pic07} alt="" />
           </span>
@@ -219,8 +219,8 @@ class Main extends React.Component {
               </a>
             </li>
           </ul>
-          <h3 className="line"></h3>
-          <h2 className="major">Employee Tracker</h2>
+          <h4 className="line"></h4>
+          <h4 className="major">Employee Tracker</h4>
           <span className="image main">
             <img src={pic05} alt="" />
           </span>
