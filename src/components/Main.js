@@ -8,6 +8,9 @@ import pic04 from '../images/budget.png'
 import pic05 from '../images/manager.png'
 import pic06 from '../images/march.gif'
 import pic07 from '../images/fitness.png'
+import pic08 from '../images/f2p.png'
+import YouTube from 'react-youtube';
+
 import resBack from '../images/background1.jpg'
 import emailjs from 'emailjs-com';
 
@@ -81,6 +84,36 @@ class Main extends React.Component {
             }`}
           style={{ display: 'none' }}
         >
+          <h4 className="major">Free to Play Game Discovery</h4>
+          <span className="image main">
+            <img src={pic08} alt="" />
+          </span>
+          <p>
+          Not sure which game to play next? Don't feel like spending any money to play something new? You've come to the 
+          right place! Here you can search for free to play games by Genre, Platform, and a sort order. Go ahead, give it 
+          a shot and find your next favorite Free-To-Play game!          
+          </p>
+          <ul className="icons">
+            <li>
+              <a
+                href="https://github.com/Carlo-Defilippis/100-days-of-code/tree/master/Projects/F2P Games" target='_blank'
+                className="icon fa-github"
+              >
+                <span className="label">GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://carlo-defilippis.github.io/100-days-of-code/Projects/F2P%20Games/index.html" target='_blank'
+                className="icon fa fa-link"
+                aria-hidden='true'
+              >
+              </a>
+            </li>
+          </ul>
+          <h4 className="line"></h4>
+
+          {close}
           <h4 className="major">React Employee Searcher</h4>
           <span className="image main">
             <img src={pic02} alt="" />
@@ -108,8 +141,38 @@ class Main extends React.Component {
               </a>
             </li>
           </ul>
-          {close}
+
           <h4 className="line"></h4>
+
+          <h4 className="major">Robot with Voice Recognition</h4>
+          <span className="image main" style={{width: '100%', height: '100%', margin: 'auto'}}>
+            <YouTube videoId='Pg86xwgByZA' style={{display: 'block'}} />
+          </span>
+          <p>
+            I built a Custom Robot from scratch and I have been learning to implement voice recognition via Python.  This project is ongoing and I will provide more details as it progresses! 
+            Here is a video of an example of how the voice recognition works.
+          </p>
+          <ul className="icons">
+            <li>
+              <a
+                href="https://github.com/Carlo-Defilippis/React_Employee_App" target='_blank'
+                className="icon fa-github"
+              >
+                <span className="label">GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://carlo-defilippis.github.io/React_Employee_App/" target='_blank'
+                className="icon fa fa-link"
+                aria-hidden='true'
+              >
+              </a>
+            </li>
+          </ul>
+
+          <h4 className="line"></h4>
+
           <h4 className="major">Google Books Search and Save</h4>
           <span className="image main">
             <img src={pic03} alt="" />
@@ -253,9 +316,9 @@ class Main extends React.Component {
               <div className="portfolio2" style={{ margin: 'auto' }} ><span className="portfolio2">CARLO DEFILIPPIS</span></div>
               <div className="portfolio3"><span className="portfolio3" ref={ref => this.fooRef = ref} data-tip="I'm grew up in Wayne, NJ and spent a lot of summers <br> as a child visiting family in Italy which is the main reason <br> I am fluent in Italian." onMouseOver={() => { ReactTooltip.show(this.fooRef) }}>BUDD LAKE, NJ 07828</span></div>
               <div className="portfolio3"><span className="portfolio3">(973) 519-0335 | </span><a ref={ref => this.fooRef = ref} data-tip="Click here to email me." onMouseOver={() => { ReactTooltip.show(this.fooRef) }} href='mailto: carlo.defilippis@me.com'><span className="portfolio4">carlo.defilippis@me.com</span></a></div>
-              <div className="portfolio5"><span className="portfolio5"> </span><a href="http://www.carlodefilippis.com/">www.carlodefilippis.com</a> </div>
-              <div className="portfolio5"><span className="portfolio5"> </span><a href="https://github.com/carlo-defilippis/">https://github.com/Carlo-Defilippis</a> </div>
-              <div className="portfolio5"><span className="portfolio5"> </span><a href="https://www.freecodecamp.org/carlodefilippis/">https://www.freecodecamp.org/carlodefilippis</a> </div>
+              <div className="portfolio5"><span className="portfolio5"> </span><a href="http://www.carlodefilippis.com/" target='_blank'>www.carlodefilippis.com</a> </div>
+              <div className="portfolio5"><span className="portfolio5"> </span><a href="https://github.com/carlo-defilippis/" target='_blank'>https://github.com/Carlo-Defilippis</a> </div>
+              <div className="portfolio5"><span className="portfolio5"> </span><a href="https://www.freecodecamp.org/carlodefilippis/" target='_blank'>https://www.freecodecamp.org/carlodefilippis</a> </div>
               <div className="portfolio6"><span className="portfolio6">PROFESSIONAL SUMMARY</span></div>
               <div className="portfolio7"><span className="portfolio7">Innovative and proactive Full Stack Developer, successful at developing elegant, groundbreaking website and</span></div>
               <div className="portfolio7"><span className="portfolio7">application designs. Talented in project management, team collaboration and independent problem-solving.</span></div>
@@ -331,7 +394,7 @@ class Main extends React.Component {
               </li>
             </ul>
           </form>
-          <p>Send me a message using this form and I'll get back to you shortly. If you'd rather reach me through LinkedIn, 
+          <p>Send me a message using this form and I'll get back to you shortly. If you'd rather reach me through LinkedIn,
             feel free to use the link below.
           </p>
           <ul className="icons">
