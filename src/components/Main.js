@@ -331,6 +331,9 @@ class Main extends React.Component {
               </li>
             </ul>
           </form>
+          <p>Send me a message using this form and I'll get back to you shortly. If you'd rather reach me through LinkedIn, 
+            feel free to use the link below.
+          </p>
           <ul className="icons">
             <li>
               <a
