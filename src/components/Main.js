@@ -9,7 +9,7 @@ import pic05 from '../images/manager.png'
 import pic06 from '../images/march.gif'
 import pic07 from '../images/fitness.png'
 import pic08 from '../images/f2p.png'
-import YouTube from 'react-youtube';
+import YouTube from 'react-youtube-embed'
 
 import resBack from '../images/background1.jpg'
 import emailjs from 'emailjs-com';
@@ -146,7 +146,7 @@ class Main extends React.Component {
 
           <h4 className="major">Robot with Voice Recognition</h4>
           <span className="image main" style={{width: '100%', height: '100%', margin: 'auto'}}>
-            <YouTube videoId='Pg86xwgByZA' style={{display: 'block'}} />
+            <YouTube id='Pg86xwgByZA' />
           </span>
           <p>
             I built a Custom Robot from scratch and I have been learning to implement voice recognition via Python.  This project is ongoing and I will provide more details as it progresses! 
