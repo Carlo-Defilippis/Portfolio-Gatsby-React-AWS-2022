@@ -404,7 +404,6 @@ assisted the events team with scraping other websites to pull attendee data as l
 I used a combination of technologies such as:</span></div>
 <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">ReactJS</span></div>
-              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby Cloud</span></div>
               <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">JavaScript</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">API's</span></div>
@@ -418,7 +417,6 @@ I used a combination of technologies such as:</span></div>
 which included technologies such as:</span></div>
 <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">ReactJS</span></div>
-              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Netlify</span></div>
               <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">JavaScript</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">GraphQL</span></div>
