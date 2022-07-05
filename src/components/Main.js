@@ -374,13 +374,14 @@ assisted the events team with scraping other websites to pull attendee data as l
               <div className="portfolio7"><span className="portfolio7">verifying code. Prepared to offer analytical and detail oriented abilities to the team.</span></div>
               <div className="portfolio6"><span className="portfolio6">SKILLS</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Proficient in JavaScript</span></div>
-              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Expertise working with data structures and</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">React, express</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Expertise working with data structures</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Hands on experience with Node.JS</span></div>
-              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">algorithms</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">Algorithms</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Scripting - JavaScript, Typescript, Bash</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Frameworks: Bootstrap, JQuery, Semantic-UI, AJAX,</span></div>
               <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">Scripting, Python Databases - MySQL,</span></div>
-              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">React.js, express</span></div>
               <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">SQLServer, MongoDB (NoSQL)</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Agile development methodologies</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Expert in Git Version Control and hands on</span></div>
@@ -403,6 +404,7 @@ assisted the events team with scraping other websites to pull attendee data as l
 I used a combination of technologies such as:</span></div>
 <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">ReactJS</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby Cloud</span></div>
               <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">JavaScript</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">API's</span></div>
@@ -416,6 +418,7 @@ I used a combination of technologies such as:</span></div>
 which included technologies such as:</span></div>
 <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">ReactJS</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Netlify</span></div>
               <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">JavaScript</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">GraphQL</span></div>
