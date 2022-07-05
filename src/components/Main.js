@@ -71,7 +71,7 @@ class Main extends React.Component {
             <img src={pic01} alt="My Photo" style={{ width: '50%', display: 'block', marginRight: 'auto', marginLeft: 'auto' }} />
           </span>
           <p>
-            Innovative and proactive Full Stack Developer specializing in Gatsby, successful at developing elegant,
+            Innovative and proactive Full Stack Developer specializing in Gatsby/React, successful at developing elegant,
             groundbreaking website and application designs.  Talented in project management, team
             collaboration and independent problem-solving. Highly organized multitasking with expertise in scheduling
             projects, enhancing designs, writing and verifying code. Prepared to offer analytical and detail oriented
