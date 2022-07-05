@@ -9,6 +9,8 @@ import pic05 from '../images/manager.png'
 import pic06 from '../images/march.gif'
 import pic07 from '../images/fitness.png'
 import pic08 from '../images/f2p.png'
+import pic09 from '../images/sbfcu.jpg'
+import pic10 from '../images/drips.jpg'
 import YouTube from 'react-youtube-embed'
 
 import resBack from '../images/background1.jpg'
@@ -69,8 +71,8 @@ class Main extends React.Component {
             <img src={pic01} alt="My Photo" style={{ width: '50%', display: 'block', marginRight: 'auto', marginLeft: 'auto' }} />
           </span>
           <p>
-            Innovative and proactive Full Stack Developer, successful at developing elegant,
-            groundbreaking website and application designs. Talented in project management, team
+            Innovative and proactive Full Stack Developer specializing in Gatsby, successful at developing elegant,
+            groundbreaking website and application designs.  Talented in project management, team
             collaboration and independent problem-solving. Highly organized multitasking with expertise in scheduling
             projects, enhancing designs, writing and verifying code. Prepared to offer analytical and detail oriented
             abilities to the team.
@@ -84,6 +86,52 @@ class Main extends React.Component {
             }`}
           style={{ display: 'none' }}
         >
+
+        <h4 className="major">Drips Inc.</h4>
+          <span className="image main">
+            <img src={pic10} alt="" />
+          </span>
+          <p>
+          While at Drips, I managed, improved, and created web pages for the company website. Working with
+Adobe Illustrator and the marketing team, I would translate web designs from concept to live release
+with a focus on responsiveness, ingenuity, and speed. I'd oversee testing to ensure brand voice and look
+were maintained through each step of the process. To promote efficiency in a fast-paced environment,
+I also created WordPress templates using graphql and gatsby for easy page replications, so designs and
+functionality could be duplicated and personalized for specific verticals. Using best practices and SEO,
+I improved the lighthouse score significantly. In addition to maintaining the company website, I also
+assisted the events team with scraping other websites to pull attendee data as leads for the sales team.
+          </p>
+          <ul className="icons">
+            <li>
+              <a
+                href="https://www.drips.com" target='_blank'
+                className="icon fa fa-link"
+                aria-hidden='true'
+              >
+              </a>
+            </li>
+          </ul>
+          <h4 className="line"></h4>
+
+<h4 className="major">South Bend Firefighters Credit Union</h4>
+          <span className="image main">
+            <img src={pic09} alt="" />
+          </span>
+          <p>
+          Technical lead full stack developer. Created and maintained a full stack website with a custom CMS panel using NetlifyCMS.
+          </p>
+          <ul className="icons">
+            <li>
+              <a
+                href="https://www.sbfcu.org" target='_blank'
+                className="icon fa fa-link"
+                aria-hidden='true'
+              >
+              </a>
+            </li>
+          </ul>
+          <h4 className="line"></h4>
+
           <h4 className="major">Free to Play Game Discovery</h4>
           <span className="image main">
             <img src={pic08} alt="" />
@@ -314,7 +362,7 @@ class Main extends React.Component {
           <div className='resumeBackground' onMouseLeave={() => { ReactTooltip.hide(this.fooRef) }} style={{ backgroundImage: `url(${resBack})`, objectFit: 'cover', width: '100%', height: '100%', float: 'left' }}>
             <div className='resumeDisplay' style={{ marginLeft: '3rem', marginRight: '3rem', marginTop: '3rem', marginBottom: '3rem' }}>
               <div className="portfolio2" style={{ margin: 'auto' }} ><span className="portfolio2">CARLO DEFILIPPIS</span></div>
-              <div className="portfolio3"><span className="portfolio3" ref={ref => this.fooRef = ref} data-tip="I'm grew up in Wayne, NJ and spent a lot of summers <br> as a child visiting family in Italy which is the main reason <br> I am fluent in Italian." onMouseOver={() => { ReactTooltip.show(this.fooRef) }}>BUDD LAKE, NJ 07828</span></div>
+              <div className="portfolio3"><span className="portfolio3" ref={ref => this.fooRef = ref} data-tip="I'm grew up in Wayne, NJ and spent a lot of summers <br> as a child visiting family in Italy which is the main reason <br> I am fluent in Italian." onMouseOver={() => { ReactTooltip.show(this.fooRef) }}>SOMERSET, NJ 08873</span></div>
               <div className="portfolio3"><span className="portfolio3">(973) 519-0335 | </span><a ref={ref => this.fooRef = ref} data-tip="Click here to email me." onMouseOver={() => { ReactTooltip.show(this.fooRef) }} href='mailto: carlo.defilippis@me.com'><span className="portfolio4">carlo.defilippis@me.com</span></a></div>
               <div className="portfolio5"><span className="portfolio5"> </span><a href="http://www.carlodefilippis.com/" target='_blank'>www.carlodefilippis.com</a> </div>
               <div className="portfolio5"><span className="portfolio5"> </span><a href="https://github.com/carlo-defilippis/" target='_blank'>https://github.com/Carlo-Defilippis</a> </div>
@@ -328,18 +376,51 @@ class Main extends React.Component {
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Proficient in JavaScript</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Expertise working with data structures and</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Hands on experience with Node.JS</span></div>
-              <div className="portfolio5"><span className="portfolio5">algorithms</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">algorithms</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Scripting - JavaScript, Typescript, Bash</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Frameworks: Bootstrap, JQuery, Semantic-UI, AJAX,</span></div>
-              <div className="portfolio5"><span className="portfolio5">Scripting, Python Databases - MySQL,</span></div>
-              <div className="portfolio5"><span className="portfolio5">React.js, express</span></div>
-              <div className="portfolio5"><span className="portfolio5">SQLServer, MongoDB (NoSQL)</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">Scripting, Python Databases - MySQL,</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">React.js, express</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">SQLServer, MongoDB (NoSQL)</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Agile development methodologies</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Expert in Git Version Control and hands on</span></div>
-              <div className="portfolio5"><span className="portfolio5">Self-starter</span></div>
-              <div className="portfolio5"><span className="portfolio5">Git-Flow</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">Self-starter</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">Git-Flow</span></div>
               <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Team player</span></div>
+              <br></br>
               <div className="portfolio6"><span className="portfolio6">WORK HISTORY</span></div>
+              <br></br>
+              <div className="portfolio9"><span className="portfolio9">Full Stack Developer</span></div>
+              <div className="portfolio10"><span className="portfolio10">Drips Inc. - Akron, OH | July 2021 to Present</span></div>
+              <div className="portfolio5"><span className="portfolio5">While at Drips, I managed, improved, and created web pages for the company website. Working with
+Adobe Illustrator and the marketing team, I would translate web designs from concept to live release
+with a focus on responsiveness, ingenuity, and speed. I’d oversee testing to ensure brand voice and look
+were maintained through each step of the process. To promote efficiency in a fast-paced environment,
+I also created WordPress templates using graphql and gatsby for easy page replications, so designs and
+functionality could be duplicated and personalized for specific verticals. Using best practices and SEO,
+I improved the lighthouse score significantly. In addition to maintaining the company website, I also
+assisted the events team with scraping other websites to pull attendee data as leads for the sales team.
+I used a combination of technologies such as:</span></div>
+<div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">ReactJS</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby Cloud</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">JavaScript</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">API's</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">WordPress</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">GraphQL</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">and many more...</span></div>
+              <br></br>
+              <div className="portfolio9"><span className="portfolio9">Full Stack Developer</span></div>
+              <div className="portfolio10"><span className="portfolio10">South Bend Firefighters Credit Union - South Bend, IN | January 2021 to July 2021</span></div>
+              <div className="portfolio5"><span className="portfolio5">Technical lead full stack developer. Created and maintained a full stack website with a custom CMS panel
+which included technologies such as:</span></div>
+<div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Gatsby JS</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">ReactJS</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">Netlify</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">JavaScript</span></div>
+              <div className="portfolio8"><span className="portfolio8">● </span><span className="portfolio5">GraphQL</span></div>
+              <div className="portfolio5"><span className="portfolio8">● </span><span className="portfolio5">and many more...</span></div>
+              <br></br>
               <div className="portfolio9"><span className="portfolio9">SCHUMACHER CHEVROLET</span></div>
               <div className="portfolio10"><span className="portfolio10">Parts Department Associate | Livingston, NJ | February 2018 - August 2020</span></div>
               <div className="portfolio5"><span className="portfolio5">Monitored social media and online sources for industry trends.</span></div>
